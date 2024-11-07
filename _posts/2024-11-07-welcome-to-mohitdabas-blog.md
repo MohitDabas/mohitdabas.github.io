@@ -7,7 +7,7 @@ categories:
   - blog
 tags:
   - introduction
-  - MohitDabas
+  - mohitdabas
 ---
 
 Welcome to my blog! 
