@@ -49,6 +49,12 @@ import base64
 import zlib
 from threading import Thread
 ```
+### External dependencies for Server:
+```bash
+pip install pycryptodome
+```
+
+
 ### Modules and Their Purpose
 
 1. **`os`**  
