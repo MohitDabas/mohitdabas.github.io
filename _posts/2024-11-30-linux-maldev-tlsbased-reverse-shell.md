@@ -24,7 +24,7 @@ A reverse shell is a type of remote shell where the target machine (client) conn
 
 To make the communication secure, we'll use **TLS (Transport Layer Security)**, which encrypts all traffic between the server and client.
 
----
+
 
 ## **Key Features of the Code**
 
@@ -33,7 +33,7 @@ To make the communication secure, we'll use **TLS (Transport Layer Security)**, 
 - **Threaded Server**: Handles multiple client connections using threads.
 - **Regenerates Keys on Each Run**: Ensures fresh keys and certificates every time the script is executed.
 
----
+
 
 ## **Code Walkthrough**
 
