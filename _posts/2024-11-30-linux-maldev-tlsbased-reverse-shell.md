@@ -17,7 +17,6 @@ tags:
 
 In this blog, we’ll walk through the process of building a **TLS-secured reverse shell** using Python. This reverse shell ensures that all communications between the client and server are encrypted using self-signed certificates. The code  can be found here [https://github.com/MohitDabas/Linux_Malware_Development/blob/main/ssl_reverse_shell/reverse_ssl.py](https://github.com/MohitDabas/Linux_Malware_Development/blob/main/ssl_reverse_shell/reverse_ssl.py).
 
----
 
 ## **What is a Reverse Shell?**
 
