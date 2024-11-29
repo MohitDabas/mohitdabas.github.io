@@ -11,7 +11,7 @@ tags:
   - mohitdabas
 ---
 
-# **Building a SSL/TLS Reverse Shell with Python**
+Building a SSL/TLS Reverse Shell with Python
 
 ![tls-reverse-shell](/assets/images/linux-maldev/tls-revers-shell.png){:class="img-responsive"}
 
