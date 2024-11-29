@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Linux Malware Development: Building a TLS-Based Reverse Shell with Python"
 date: 2024-11-30
 header:
   teaser: "/assets/images/linux-maldev/tls-revers-shell.png"
