@@ -242,4 +242,4 @@ python reverse_ssl.py
 ```bash
 python -c "<compressed_client_code>"
 ```
-![tls-reverse-shellclient](//assets/images/linux-maldev/tls-client.png){:class="img-responsive"}
+![tls-reverse-shellclient](/assets/images/linux-maldev/tls-client.png){:class="img-responsive"}
