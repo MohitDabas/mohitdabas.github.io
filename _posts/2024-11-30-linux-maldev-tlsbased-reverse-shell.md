@@ -1,5 +1,5 @@
 ---
-title: "Linux Malware Development: Building a TLS/SSL-Based Reverse Shell with Python"
+title: "Linux Malware Development: Building a one liner TLS/SSL-Based reverse shell with Python"
 date: 2024-11-30
 header:
   teaser: "/assets/images/linux-maldev/tls-revers-shell.png"
@@ -11,7 +11,7 @@ tags:
   - mohitdabas
 ---
 
-Building a SSL/TLS Reverse Shell with Python
+Building a obfuscated SSL/TLS Reverse Shell with Python
 
 ![tls-reverse-shell](/assets/images/linux-maldev/tls-revers-shell.png){:class="img-responsive"}
 
@@ -48,10 +48,13 @@ import base64
 import zlib
 from threading import Thread
 ```
+
 ### External dependencies for Server:
 ```bash
 pip install pycryptodome
 ```
+**opensessl** must be installed on the system to generate the self-signed certificate.
+
 
 
 ### Modules and Their Purpose
