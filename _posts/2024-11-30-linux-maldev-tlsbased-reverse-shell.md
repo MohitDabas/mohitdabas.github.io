@@ -1,5 +1,5 @@
 ---
-title: "Linux Malware Development: Building a TLS-Based Reverse Shell with Python"
+title: "Linux Malware Development: Building a TLS/SSL-Based Reverse Shell with Python"
 date: 2024-11-30
 header:
   teaser: "/assets/images/linux-maldev/tls-revers-shell.png"
@@ -15,7 +15,7 @@ Building a SSL/TLS Reverse Shell with Python
 
 ![tls-reverse-shell](/assets/images/linux-maldev/tls-revers-shell.png){:class="img-responsive"}
 
-In this blog, we’ll walk through the process of building a **TLS-secured reverse shell** using Python. This reverse shell ensures that all communications between the client and server are encrypted using self-signed certificates. The code  can be found here [https://github.com/MohitDabas/Linux_Malware_Development/blob/main/ssl_reverse_shell/reverse_ssl.py](https://github.com/MohitDabas/Linux_Malware_Development/blob/main/ssl_reverse_shell/reverse_ssl.py).
+In this blog, we’ll walk through the process of building a **TLS-secured reverse shell** using Python. This reverse shell ensures that all communications between the client and server are encrypted using self-signed certificates. The code can be found here [Github Repo TLS reverse shell](https://github.com/MohitDabas/Linux_Malware_Development/blob/main/ssl_reverse_shell/reverse_ssl.py).
 
 
 ## **What is a Reverse Shell?**
