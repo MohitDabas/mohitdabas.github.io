@@ -115,7 +115,7 @@ def keys_check_or_create(ip_address):
 ```
 This function:
 Removes any old keys or certificates.
-Generates a new RSA key pair and saves the private key <span style="border: 1px solid black; padding: 2px;">private_key.pem</span> and public key <span style="border: 1px solid black; padding: 2px;">public_key.pem</span> in the keys folder.
+Generates a new RSA key pair and saves the private key and public key  in the keys folder.
 
 ### **3. Generating Self-Signed Certificate**
 We use OpenSSL to create a self-signed certificate.
@@ -147,7 +147,7 @@ subjectAltName = @alt_names
 IP.1 = {ip_address}
 """)
 ```
-The configuration file ensures the certificate is valid for the provided IP address using the <span style="border: 1px solid black; padding: 2px;">Subject Alternative Name (SAN).</span>
+The configuration file ensures the certificate is valid for the provided IP address using the Subject Alternative Name (SAN).
 ```python
     run([
         "openssl", "req", "-new", "-x509",
