@@ -1,6 +1,8 @@
 ---
 title: "Zero-Import Persistence: How Malicious Python .pth Files Hijack Every Interpreter Launch"
 date: 2026-11-20
+classes: wide
+mermaid: true
 header:
   teaser: "/assets/images/python-pth-persistence/python-pth-persistence-teaser.png"
 categories:
@@ -157,27 +159,7 @@ _bootstrap()
 
 Treating `site-packages` as passive, inert library storage is a broken security model. Defending against `.pth` persistence requires controls across three layers: build-time CI gates, runtime kernel telemetry, and fleet threat hunting.
 
-```mermaid
-flowchart TD
-    subgraph Layer1["1. Build-Time CI Gate"]
-        B1["Pre-install Wheel Manifest Inspection"]
-        B2["Post-install Executable .pth Scanner"]
-        B3["Lockfile Hash Pinning (--require-hashes)"]
-    end
-
-    subgraph Layer2["2. Runtime Telemetry"]
-        R1["eBPF / Falco Rules (open_write on .pth)"]
-        R2["Read-Only Container Filesystems"]
-    end
-
-    subgraph Layer3["3. Fleet Hunting & IR"]
-        H1["Osquery Scheduled File Scans"]
-        H2["YARA Detection for import statements"]
-        H3["Token Invalidation & Secret Rotation"]
-    end
-
-    Layer1 --> Layer2 --> Layer3
-```
+![Defense-in-Depth Pipeline](/assets/images/python-pth-persistence/defense-in-depth-flowchart.svg){:class="img-responsive"}
 
 ---
 

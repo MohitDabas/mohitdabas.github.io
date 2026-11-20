@@ -1,0 +1,49 @@
+<!-- Custom styles for wider code blocks, typography, and diagram rendering -->
+<style>
+  /* Ensure code containers expand comfortably in wide layout */
+  .page__content .highlight,
+  .page__content pre.highlight,
+  .page__content div.highlighter-rouge,
+  .page__content figure.highlight {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 8px;
+    margin: 1.5em 0;
+  }
+
+  .page__content pre.highlight {
+    padding: 1.1em 1.25em;
+    font-size: 0.9em;
+    line-height: 1.55;
+    overflow-x: auto;
+  }
+
+  /* Make wide content layout expand nicely on desktop */
+  @media (min-width: 64em) {
+    .layout--single.wide .page__content {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    .layout--single.wide .page__inner-wrap {
+      max-width: 1280px;
+    }
+  }
+
+  /* Mermaid diagram styling */
+  .mermaid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0d1117;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    overflow-x: auto;
+  }
+
+  .mermaid svg {
+    max-width: 100%;
+    height: auto;
+  }
+</style>

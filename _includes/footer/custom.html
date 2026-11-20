@@ -1,0 +1,25 @@
+{% if page.mermaid %}
+<!-- Mermaid.js Client-Side Renderer -->
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: 'dark',
+    securityLevel: 'loose'
+  });
+
+  document.addEventListener('DOMContentLoaded', async () => {
+    const mermaidBlocks = document.querySelectorAll('div.mermaid, pre.mermaid, div.language-mermaid, pre.language-mermaid');
+    for (const el of mermaidBlocks) {
+      if (el.dataset.processed) continue;
+      const code = el.textContent || el.innerText;
+      const targetDiv = document.createElement('div');
+      targetDiv.className = 'mermaid';
+      targetDiv.textContent = code.trim();
+      const parent = el.closest('div.highlighter-rouge') || el;
+      parent.replaceWith(targetDiv);
+    }
+    await mermaid.run();
+  });
+</script>
+{% endif %}
