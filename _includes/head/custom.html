@@ -1,21 +1,62 @@
 <!-- Custom styles for wider code blocks, typography, and diagram rendering -->
 <style>
-  /* Ensure code containers expand comfortably in wide layout */
-  .page__content .highlight,
-  .page__content pre.highlight,
+  /* =========================================================
+     GLOBAL RULE: All code snippets must render with dark background,
+     sleek borders, padding, and uniform typography.
+     ========================================================= */
+
+  /* Style all standalone and highlighted code snippet containers */
+  .page__content pre,
   .page__content div.highlighter-rouge,
+  .page__content .highlight,
   .page__content figure.highlight {
+    background: #263238 !important;
+    color: #eceff1 !important;
+    font-family: Monaco, Consolas, "Lucida Console", "Courier New", monospace !important;
+    font-size: 0.88em !important;
+    line-height: 1.65 !important;
+    border-radius: 6px !important;
+    border: 1px solid #37474f !important;
     width: 100% !important;
     max-width: 100% !important;
-    border-radius: 8px;
-    margin: 1.5em 0;
+    box-sizing: border-box !important;
+    margin: 1.2em 0 !important;
+    overflow-x: auto !important;
   }
 
-  .page__content pre.highlight {
-    padding: 1.1em 1.25em;
-    font-size: 0.9em;
-    line-height: 1.55;
-    overflow-x: auto;
+  /* Specific padding for code containers */
+  .page__content pre {
+    padding: 1.1em 1.25em !important;
+  }
+
+  /* Prevent double padding / double background when pre is inside .highlight or div.highlighter-rouge */
+  .page__content div.highlighter-rouge pre,
+  .page__content .highlight pre {
+    background: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 1.1em 1.25em !important;
+    box-shadow: none !important;
+  }
+
+  .page__content pre code {
+    background: transparent !important;
+    color: inherit !important;
+    border: none !important;
+    padding: 0 !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    box-shadow: none !important;
+  }
+
+  /* Subtle inline code styling (e.g., in paragraphs or list items) */
+  .page__content :not(pre) > code {
+    background: rgba(110, 118, 129, 0.15) !important;
+    color: #c9d1d9 !important;
+    padding: 0.2em 0.45em !important;
+    border-radius: 4px !important;
+    font-size: 85% !important;
+    border: 1px solid rgba(110, 118, 129, 0.2) !important;
   }
 
   /* Make wide content layout expand nicely on desktop */
