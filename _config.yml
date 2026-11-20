@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Mohit Dabas's Blog
+url: "https://mohitdabas.in"
 email: mohitdabas08@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Mohit Dabas' Blog - Exploring cybersecurity tools, techniques, and insights on life. This blog serves as a personal journal to document my ongoing cybersecurity tasks, along with various topics and reflections.
@@ -61,8 +62,8 @@ author:
   bio    : "I am a cyber security professional and my love for writing cyber security tools has made me write this blog"
   links:
     - label: "Website"
-      icon: "https://www.mohitdabas.in"
-      url: "https://"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.mohitdabas.in"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://x.com/DabasMonty"

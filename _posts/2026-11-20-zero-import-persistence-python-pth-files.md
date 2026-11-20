@@ -1,6 +1,7 @@
 ---
 title: "Zero-Import Persistence: How Malicious Python .pth Files Hijack Every Interpreter Launch"
 date: 2026-11-20
+excerpt: "Analysis of the November 2026 agent-framework PyPI compromise (GHSA-764m-3ppc-5m73). How malicious .pth files achieve zero-import persistence during CPython interpreter startup, and how to defend against them."
 classes: wide
 mermaid: true
 header:
