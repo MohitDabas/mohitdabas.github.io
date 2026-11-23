@@ -2,6 +2,7 @@
 title: "Fake Challan, Real Car Plate: Deconstructing an Indian Smishing Campaign's 15MB Android RAT"
 date: 2026-11-23 16:30:00 +0530
 classes: wide
+mermaid: true
 excerpt: "A targeted SMS with my actual car registration number claimed an unpaid ₹2,000 traffic challan. Here is the in-depth static analysis of how attackers cloned the Google Play Store, packed a 15MB Android RAT inside a fake ONNX AI model, hid cryptographic keys in native C++ binaries, and crafted anti-analysis traps to blind reverse engineers."
 categories:
   - blog
@@ -391,6 +392,7 @@ Why would an e-challan malware implement a full `VpnService`?
 ## 8. Indicators of Compromise (IOCs)
 
 ### File Hashes
+
 | Indicator | Type | Description |
 | :--- | :--- | :--- |
 | `cdfa0d3ffc79bbb600969befaef7c42e22430f0d6a41d6488a93deecb3cbfa07` | SHA-256 | `Mparivahan.apk` (Outer Dropper) |
@@ -401,12 +403,13 @@ Why would an e-challan malware implement a full `VpnService`?
 | `0939a38f181e201e6e9b05f759f525e0ef1f41aa349d237f4f1d6a1795d5816c` | SHA-256 | `lib/x86/libpayload.so` |
 
 ### Infrastructure & Identities
+
 | Type | Value | Context |
 | :--- | :--- | :--- |
 | **Phishing Domain** | `mparivahanana[.]duckdns[.]org` | Cloned Google Play Store / APK distribution |
-| **Originating Phone**| `+91 74986 61589` | Smishing SMS sender |
-| **Package (Dropper)**| `com.sanaminfo.payload` | Malicious installer |
-| **Package (Payload)**| `com.drx4a.servis` | Dropped stage-2 RAT |
+| **Originating Phone** | `+91 74986 61589` | Smishing SMS sender |
+| **Package (Dropper)** | `com.sanaminfo.payload` | Malicious installer |
+| **Package (Payload)** | `com.drx4a.servis` | Dropped stage-2 RAT |
 | **Crypto Secret** | `Xq7mK2pR8nF4` | Native XOR / decryption key in `libpayload.so` |
 
 ---
@@ -472,3 +475,4 @@ Stay tuned, keep your Android devices restricted to official app stores, and rem
 
 ---
 *Found this analysis helpful? Follow me on [Twitter/X](https://x.com/mohitdabas) and [LinkedIn](https://linkedin.com/in/mohitdabas) for real-time malware analysis breakdowns and reverse engineering research.*
+

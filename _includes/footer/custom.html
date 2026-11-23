@@ -1,4 +1,4 @@
-{% if page.mermaid %}
+{% if page.mermaid or page.content contains "mermaid" %}
 <!-- Mermaid.js Client-Side Renderer -->
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
@@ -8,7 +8,7 @@
     securityLevel: 'loose'
   });
 
-  document.addEventListener('DOMContentLoaded', async () => {
+  const renderMermaid = async () => {
     const mermaidBlocks = document.querySelectorAll('div.mermaid, pre.mermaid, div.language-mermaid, pre.language-mermaid');
     for (const el of mermaidBlocks) {
       if (el.dataset.processed) continue;
@@ -20,6 +20,12 @@
       parent.replaceWith(targetDiv);
     }
     await mermaid.run();
-  });
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderMermaid);
+  } else {
+    renderMermaid();
+  }
 </script>
 {% endif %}
